@@ -2,7 +2,8 @@
     "name": "hmayer",
     "require": {
         "lib-curl": "*",
-	"ext-pcre": "*"
+	"ext-pcre": "*",
+	"ext-memcache": "*"
     },
     "autoload": {
         "psr-4": {"hmayer\\": "hmayer/"}
