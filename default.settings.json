@@ -1,0 +1,11 @@
+{
+    "key": "senhasite",
+    "connect_timeout": 1000,
+    "timeout": 1500,
+    "query": "operator",
+    "servers": [
+        "http://consultanumero1.telein.com.br",
+        "http://consultanumero2.telein.com.br",
+        "http://consultanumero3.telein.com.br"
+    ]
+}

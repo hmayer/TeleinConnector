@@ -1,0 +1,9 @@
+{
+    "name": "hmayer",
+    "require": {
+        "lib-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {"hmayer\\": "hmayer/"}
+    }
+}
