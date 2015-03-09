@@ -5,6 +5,7 @@ Scripts AGI para integração com o webservice Telein (portabilidade numérica)
   * PHP >= 5.3 < 6 (http://php.net)
   * PHP-curl extension
   * PHP-pcre extension
+  * PHP-memcache extension
   * Composer (http://getcomposer.org)
 
 ##Instalação
@@ -24,9 +25,15 @@ copie o arquivo default.settings.json para settings.json:
 
 Edite conforme suas necessidades, os campos do arquivo são:
   * **key** - string: Chave da sua conta, fornecida pela Telein
-  * **connect_timeout** - int(ms): Tempo de espera para o script conectar ao servidor, caso haja expiração, ele automaticamente passa para o próximo servidor na lista
-  * **timeout** - int(ms): Diferente da opção connect_timeout, este é o tempo que o script fica esperando o servidor responder a consulta, tem o mesmo comportamento de connect_timeout em caso de expiração
+  * **connect_timeout** - int: Tempo de espera (em ms) para o script conectar ao servidor, caso haja expiração, ele automaticamente passa para o próximo servidor na lista
+  * **timeout** - int: Diferente da opção connect_timeout, este é o tempo (em ms) que o script fica esperando o servidor responder a consulta, tem o mesmo comportamento de connect_timeout em caso de expiração
   * **query** - string(operator|rn10: modo de retorno do código da operadora, qeu pode retornar o código de discagem (eg. 20) ou o código rn1 (eg. 553098)
+  * **memcache** - object: opções do memcache
+  ..* **enabled**: bool: habilita o uso do memcache
+  ..* **host**: string: hostname do servidor memcached
+  ..* **port**: int: porta em que o memcache está escutando
+  ..* **prefix**: string: Prefixo das chaves no memcache, recomenda-se o uso de um prefixo para evitar colisões com outras aplicações usando o memcache;
+  ..* **expire**: int: Tempo (em segundos) para o cache expirar
   * **servers** - array: Lista dos servidores Telein, predefinida, mas disponível para futuras alterações.
 
 ##run.php
