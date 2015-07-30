@@ -26,7 +26,7 @@ Edite conforme suas necessidades, os campos do arquivo são:
   * **key** - string: Chave da sua conta, fornecida pela Telein
   * **connect_timeout** - int(ms): Tempo de espera para o script conectar ao servidor, caso haja expiração, ele automaticamente passa para o próximo servidor na lista
   * **timeout** - int(ms): Diferente da opção connect_timeout, este é o tempo que o script fica esperando o servidor responder a consulta, tem o mesmo comportamento de connect_timeout em caso de expiração
-  * **query** - string(operator|rn10: modo de retorno do código da operadora, qeu pode retornar o código de discagem (eg. 20) ou o código rn1 (eg. 553098)
+  * **query** - string(operator|rn1): modo de retorno do código da operadora, que pode retornar o código de discagem (eg. 20) ou o código rn1 (eg. 553098)
   * **servers** - array: Lista dos servidores Telein, predefinida, mas disponível para futuras alterações.
 
 ##run.php
