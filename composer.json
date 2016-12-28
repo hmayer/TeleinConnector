@@ -1,7 +1,7 @@
 {
     "name": "hmayer",
     "require": {
-        "lib-curl": "*",
+        "ext-curl": "*",
 	"ext-pcre": "*",
 	"ext-memcache": "*"
     },

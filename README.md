@@ -2,7 +2,7 @@
 Scripts AGI para integração com o webservice Telein (portabilidade numérica)
 
 ##Dependências
-  * PHP >= 5.3 < 6 (http://php.net)
+  * PHP >= 5.3 (http://php.net)
   * PHP-curl extension
   * PHP-pcre extension
   * PHP-memcache extension
@@ -13,9 +13,9 @@ Clone o projeto para um diretório de seu sistema:
 
 `git clone https://github.com/hmayer/TeleinConnector.git`
 
-Crie ou atualize o diretório vendor utilizado pelo composer com:
+Atualize as dependências com:
 
-`php /path/to/composer.phar dump-autoload`
+`composer install`
 
 ##Configuração
 As opções de configuração do TeleinConnector ficam no arquivo settings.json,
@@ -37,7 +37,7 @@ Edite conforme suas necessidades, os campos do arquivo são:
   * **servers** - array: Lista dos servidores Telein, predefinida, mas disponível para futuras alterações.
 
 ##run.php
-O arquivo run.php vem como um exemplo de uso do TeleinConnect para sistemas
+O arquivo run.php vem como um exemplo de uso do TeleinConnector para sistemas
 Asterisk, executado à partir do dial plan (AGI)
 
 ##Configurando o Asterisk
