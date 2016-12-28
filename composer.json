@@ -1,8 +1,9 @@
 {
     "name": "hmayer",
     "require": {
-        "lib-curl": "*",
-	"ext-pcre": "*"
+        "ext-curl": "*",
+	"ext-pcre": "*",
+        "guzzlehttp/guzzle": "^6.2"
     },
     "autoload": {
         "psr-4": {"hmayer\\": "hmayer/"}
